@@ -3,7 +3,7 @@
 The Spur project aimed to be the love child of GoFundMe and Zapier. Instead of just collecting funds, we aimed to make collecting funds conditional using all sorts of 3th party API's as truth sources.
 
 **Example:**
-You want to collect funds for a charity and decided to run a 50 km ultra marathon to achieve awareness. Using the spur platform you collect funds, under the condition that on the specified date, the Strava API resolves a completed 50km run.
+You want to collect funds for a charity and decided to run a 50 km ultra marathon to raise awareness. Using the spur platform you collect funds, under the condition that on the specified date, the Strava API resolves a completed 50km run.
 
 ## Screenshot
 
