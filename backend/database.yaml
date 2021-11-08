@@ -1,5 +1,5 @@
-username: "admin"
-password: "dubbelfris"
-host: "localhost"
+username: 'admin'
+password: 'CENSORED'
+host: 'localhost'
 port: 5432
-databaseName: "spur"
+databaseName: 'spur'

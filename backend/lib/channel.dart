@@ -23,7 +23,7 @@ class BackendChannel extends ApplicationChannel {
 
     final dataModel = ManagedDataModel.fromCurrentMirrorSystem();
     final persistentStore = PostgreSQLPersistentStore.fromConnectionInfo(
-        "admin", "dubbelfris", "localhost", 5432, "spur");
+        "admin", "CENSORED", "localhost", 5432, "spur");
 
     context = ManagedContext(dataModel, persistentStore);
   }
