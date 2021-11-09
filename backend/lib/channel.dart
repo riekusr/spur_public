@@ -57,7 +57,7 @@ class BackendChannel extends ApplicationChannel {
     // Prefer to use `link` instead of `linkFunction`.
     // See: https://aqueduct.io/docs/http/request_controller/
     router.route("/example").linkFunction((request) async {
-      return Response.ok('je geteste moedertje');
+      return Response.ok('je geteste blabla');
       // return Response.ok({"key": "value"});
     });
 

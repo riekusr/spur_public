@@ -17,10 +17,7 @@ class SpurController extends ResourceController {
 
   @Operation.get('id')
   Future<Response> getSpurByID(@Bind.path('id') int id) async {
-    // final spurQuery = Query<Spur>(context)
-    //   ..where((s) => s.id).equalTo(id)
-    //   ..join(set: (s) => s.moneyRoutes).join(object: (m) => m.moneyRoute)
-    //   ..join(set: (s) => s.metricConnects).join(object: (m) => m.metricConnect);
+
     final spurQuery = Query<Spur>(context)
       ..where((s) => s.id).equalTo(id)
       ..join(set: (s) => s.moneyRoutes).join(object: (m) => m.moneyRoute)
@@ -39,58 +36,6 @@ class SpurController extends ResourceController {
     return Response.ok(spur);
   }
 
-  // @Operation.post()
-  // Future<Response> createHero() async {
-  //   final hero = Hero()..read(await request.body.decode(), ignore: ['id']);
-  //   final query = Query<Hero>(context)..values = hero;
-  //   final insertedHero = await query.insert();
-
-  //   return Response.ok(insertedHero);
-  // }
-
-  // @Operation.delete('id')
-  // Future<Response> deleteHero(@Bind.path('id') int id) async {
-  //   final query = Query<Hero>(context)..where((h) => h.id).equalTo(id);
-  //   final deleteHero = await query.delete();
-  //   print('Delete deze kut $id');
-
-  //   return Response.ok(deleteHero);
-  // }
-
-  // // @Operation.put()
-  // // Future<Response> updateHero() async {
-  // //   final heroBody = Hero()..read(await request.body.decode(), ignore: ['id']);
-
-  // //   final query = Query<Hero>(context)
-  // //     ..values.name = heroBody.name
-  // //     ..where((x) => x.id).equalTo(heroBody.id);
-
-  // //   final updateHero = await query.update();
-  // //   return Response.ok(updateHero);
-  // // }
-  // @Operation.put('id')
-  // Future<Response> updateHero(@Bind.path('id') int id) async {
-  //   final heroBody = Hero()..read(await request.body.decode(), ignore: ['id']);
-
-  //   final query = Query<Hero>(context)
-  //     ..values.name = heroBody.name
-  //     ..where((x) => x.id).equalTo(id);
-
-  //   final updateHero = await query.update();
-
-  //   return Response.ok(updateHero);
-  // }
-  // @Operation.put('id')
-  // Future<Response> updateHero(@Bind.path('id') int id) async {
-  //   final heroBody = Hero()..read(await request.body.decode(), ignore: ['id']);
-
-  //   final query = Query<Hero>(context)
-  //     ..values.name = heroBody.name
-  //     ..where((x) => x.id).equalTo(id);
-
-  //   final updateHero = await query.update();
-  //   return Response.ok(updateHero);
-  // }
 }
 
 Spur prepMetricConnect(Spur spur) {

@@ -47,38 +47,6 @@ class SpurCardSmallController extends GetxController {
     });
   }
 
-  // void getAppServiceImage() async {
-  //   try {
-  //     var _imageurl = appAvatarUri.toString() +
-  //         spur.metricConnectSlotA.appService.avatarImage;
-  //     var response = await http.get(_imageurl);
-  //     appServiceAvatar = MemoryImage(response.bodyBytes);
-  //   } catch (e) {
-  //     appServiceAvatar = AssetImage(blankAvatar);
-  //     print('Error: $e');
-  //   } finally {
-  //     appServiceAvatarLoaded = true;
-  //     update();
-  //   }
-  // }
-
-  // void getAppServiceImage() async {
-  //   // See if spur has own image, otherwise give it placeholder
-  //   if (spur.metricConnectSlotA != null) {
-  //     var _imageurl = appAvatarUri.toString() +
-  //         spur.metricConnectSlotA.appService.avatarImage;
-  //     var response = await http.get(_imageurl);
-  //     if (response.statusCode == 200) {
-  //       appServiceAvatar = MemoryImage(response.bodyBytes);
-  //     } else {
-  //       appServiceAvatar = AssetImage(blankAvatar);
-  //     }
-  //   } else {
-  //     appServiceAvatar = AssetImage(blankAvatar);
-  //   }
-  //   appServiceAvatarLoaded = true;
-  //   update();
-  // }
 
   void resolvedUI() {
     if (spur.resolved == true && spur.resolveError != true) {

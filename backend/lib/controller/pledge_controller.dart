@@ -10,14 +10,6 @@ class PledgeController extends ResourceController {
 
   final ManagedContext context;
 
-  // @Operation.get()
-  // Future<Response> getAllSpurs() async {
-  //   final spurQuery = Query<Spur>(context);
-  //   final spurs = await spurQuery.fetch();
-  //   // print(spurs);
-  //   return Response.ok(spurs);
-  // }
-
   @Operation.get()
   Future<Response> getPledge(
       {@Bind.query('pledgeid') int pledgeId,
@@ -57,12 +49,3 @@ class PledgeController extends ResourceController {
     }
   }
 }
-// final spurQuery = Query<Spur>(context)
-//   ..where((s) => s.id).equalTo(id)
-//   ..join(set: (s) => s.moneyRoutes).join(object: (m) => m.moneyRoute);
-// final spur = await spurQuery.fetchOne();
-// print(spur);
-// if (spur == null) {
-//   return Response.notFound();
-// }
-// return Response.ok(spur);
